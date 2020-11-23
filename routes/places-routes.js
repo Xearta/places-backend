@@ -8,7 +8,7 @@ const router = express.Router();
 router.get('/:pid', placesController.getPlaceById);
 
 // Find a place by the id of the creator
-router.get('/user/:uid', placesController.getPlaceByByUserId);
+router.get('/user/:uid', placesController.getPlacesByUserId);
 
 router.post('/', placesController.createPlace);
 
