@@ -1,13 +1,15 @@
 const express = require('express');
 
-const placesControllers = require('../controllers/places-controller');
+const placesController = require('../controllers/places-controller');
 
 const router = express.Router();
 
 // Find a specific place by ID
-router.get('/:pid', placesControllers.getPlaceById);
+router.get('/:pid', placesController.getPlaceById);
 
 // Find a place by the id of the creator
-router.get('/user/:uid', placesControllers.getPlaceByByUserId);
+router.get('/user/:uid', placesController.getPlaceByByUserId);
+
+router.post('/', placesController.createPlace);
 
 module.exports = router;
